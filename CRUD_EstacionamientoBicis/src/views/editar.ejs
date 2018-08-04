@@ -1,0 +1,42 @@
+<% include partes/cabecera%> 
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="card">
+            <div class="card-body">
+              <form class="" action="/editar/<%= data.id %>" method="POST">
+                    <div class="form-group"> 
+
+                      <label for=""> ID </label>
+                      <input type="number" name="id" value="<%= data.id %>" class="form-control">
+                      <label for="">Nombre</label>
+                      <input type="text" name="nombre" value="<%= data.nombre %>" class="form-control">
+                      <label for="">WEBSITE</label>
+                      <input type="text" name="WEBSITE" value="<%= data.WEBSITE %>" class="form-control">
+                      <label for="">SITE_INFO</label>
+                      <input type="text" name="SITE_INFO" value="<%= data.SITE_INFO %>" class="form-control">
+                      <label for="">ROUTE_INFO</label>
+                      <input type="text" name="ROUTE_INFO" value="<%= data.ROUTE_INFO %>" class="form-control">
+                      <label for="">GENERAL_INFO</label>
+                      <input type="text" name="GENERAL_INFO" value="<%= data.GENERAL_INFO %>" class="form-control">
+                      <label for="">longitude</label>
+                      <input type="text" name="longitude" value="<%= data.longitude %>" class="form-control">
+                      <label for="">latitude</label>
+                      <input type="text" name="latitude" value="<%= data.latitude %>" class="form-control">
+                      <label for="">location</label>
+                      <input type="text" name="location" value="<%= data.location %>" class="form-control">
+
+                    </div>
+                    <div class=""> 
+                      <input type="submit" value="Insertar" class="btn btn-primary btn-block">
+                    </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+<% include partes/pie %>
