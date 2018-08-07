@@ -1,4 +1,4 @@
-
+ 
 const controller = {
   listar:(req,res)=>{
     req.getConnection((error,conexion)=>{
