@@ -1,3 +1,4 @@
+
 const controller = {
   listar:(req,res)=>{
     req.getConnection((error,conexion)=>{
@@ -25,9 +26,9 @@ const controller = {
   },
   borrar:(req,res)=>{
     req.getConnection((error, conexion)=>{
-      const id = req.params.id;
-      conexion.query('delete from estacionamiento_bicis where id = ?',[id],(error, rows)=>{
-        //console.log(req.params);
+      const id = req.params.Id;
+      conexion.query('delete from estacionamiento_bicis where Id = ?',[id],(error, rows)=>{
+        console.log(req.params);
         res.redirect('/');
       });
     })
@@ -35,8 +36,8 @@ const controller = {
   },
   editar:(req,res)=>{
     req.getConnection((error, con)=>{
-      const id = req.params.id;
-      con.query('select * from estacionamiento_bicis where id = ?',[id],(error, datos)=>{
+      const id = req.params.Id;
+      con.query('select * from estacionamiento_bicis where Id = ?',[id],(error, datos)=>{
         //console.log(datos);
         res.render('editar',{
           data: datos[0]
@@ -46,15 +47,30 @@ const controller = {
 
   },
   actualizar:(req,res)=>{
-    const id = req.params.id;
-    const nuevo = req.body;
+    const id=req.params.Id;
+    const nuevo=req.body;
     req.getConnection((error, db)=>{
-      db.query('UPDATE estacionamiento_bicis set ? where id = ?', [nuevo, id], (error, rows)=>{
+      db.query('UPDATE estacionamiento_bicis set ? where Id = ?', [nuevo, id], (error, rows)=>{
         res.redirect('/')
       });
     })
 
-  }
+  },
+  consultar:(req,res)=>{
+    req.getConnection((error, db)=>{
+      db.query('select * from estacionamiento_bicis where  nombre like"J%"',(error, datos)=>{
+        //console.log(datos);
+        if(error){
+          res.json(error);
+        }
+        res.render('consultas',{
+          data:datos
+        })
+      })
+    })
 
-  }
+  },
+
+}
+
 module.exports=controller;

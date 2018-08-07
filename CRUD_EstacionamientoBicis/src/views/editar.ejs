@@ -1,4 +1,4 @@
-<% include partes/cabecera%> 
+<% include partes/cabecera%>
 
     <div class="container mt-5">
       <div class="row">
@@ -6,29 +6,27 @@
           <div class="card">
             <div class="card-body">
               <form class="" action="/editar/<%= data.id %>" method="POST">
-                    <div class="form-group"> 
-
-                      <label for=""> ID </label>
-                      <input type="number" name="id" value="<%= data.id %>" class="form-control">
+                    <div class="form-group">
+                      <label for="">ID</label>
+                      <input type="number" name="Id" value="<%= data.id %>" class="form-control">
                       <label for="">Nombre</label>
-                      <input type="text" name="nombre" value="<%= data.nombre %>" class="form-control">
-                      <label for="">WEBSITE</label>
-                      <input type="text" name="WEBSITE" value="<%= data.WEBSITE %>" class="form-control">
-                      <label for="">SITE_INFO</label>
-                      <input type="text" name="SITE_INFO" value="<%= data.SITE_INFO %>" class="form-control">
-                      <label for="">ROUTE_INFO</label>
-                      <input type="text" name="ROUTE_INFO" value="<%= data.ROUTE_INFO %>" class="form-control">
-                      <label for="">GENERAL_INFO</label>
-                      <input type="text" name="GENERAL_INFO" value="<%= data.GENERAL_INFO %>" class="form-control">
-                      <label for="">longitude</label>
-                      <input type="text" name="longitude" value="<%= data.longitude %>" class="form-control">
-                      <label for="">latitude</label>
-                      <input type="text" name="latitude" value="<%= data.latitude %>" class="form-control">
-                      <label for="">location</label>
-                      <input type="text" name="location" value="<%= data.location %>" class="form-control">
-
+                      <input type="text" name="Nombre" value="<%= data.nombre %>" class="form-control">
+                      <label for="">Direccion</label>
+                      <input type="text" name="Direccion" value="<%= data.Direccion %>" class="form-control">
+                      <label for="">Web</label>
+                      <input type="text" name="web" value="<%= data.web %>" class="form-control">
+                      <label for="">Longitud</label>
+                      <input type="text" name="Longitud" value="<%= data.Longitud %>" class="form-control">
+                      <label for="">Latitud</label>
+                      <input type="text" name="Latitud" value="<%= data.Latitud %>" class="form-control">
+                      <label for="">Ubicacion</label>
+                      <input type="text" name="ubicacion" value="<%= data.ubicacion %>" class="form-control">
+                      <label for="">Puestos de interior</label>
+                      <input type="text" name="Puestos_interior" value="<%= data.Puestos_interior %>" class="form-control">
+                      <label for="">Puestos de exterior</label>
+                      <input type="text" name="Puestos_exterior" value="<%= data.Puestos_exteriore %>" class="form-control"></div>
                     </div>
-                    <div class=""> 
+                    <div class="">
                       <input type="submit" value="Insertar" class="btn btn-primary btn-block">
                     </div>
               </form>
@@ -37,6 +35,6 @@
         </div>
       </div>
     </div>
-      
+
 
 <% include partes/pie %>
