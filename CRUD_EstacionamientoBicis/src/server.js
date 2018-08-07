@@ -23,7 +23,7 @@ app.use(bodyParser.json());  //"use" nos permite ejercutar middleware
 
 const rutas= require('./routes/rutas');
 
-app.use('/', rutas);   
+app.use('/', rutas);
 
 app.listen('2000',()=>{
   console.log('Aplicacion iniciada en el puerto 2000');
